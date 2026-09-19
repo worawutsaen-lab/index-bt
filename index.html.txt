@@ -1,183 +1,183 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>วรวุฒิ แสนเพียง - คณิตศาสตร์</title>
-<!-- นำเข้าฟอนต์ Google Fonts (Prompt) -->
-<link rel="stylesheet" href="https://cloudflare.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-/* --- CSS Reset --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-family: 'Prompt', sans-serif; color: #333; }
-body { background-color: #f4f7f6; line-height: 1.6; }
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-img { max-width: 100%; height: auto; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วรวุฒิ แสนเพียง - คณิตศาสตร์</title>
+    <!-- นำเข้าฟอนต์ Google Fonts (Prompt) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS Reset --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-family: 'Prompt', sans-serif; color: #333; }
+        body { background-color: #f4f7f6; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; }
 
-/* --- ตัวแปรสี --- */
-:root {
---primary-color: #6c5ce7; /* ม่วงหลัก */
---secondary-color: #0984e3; /* ฟ้าหลัก */
---bg-color-light: #fff;
---bg-color-alt: #f1f2f6;
---text-color: #2d3436;
-}
+        /* --- ตัวแปรสี --- */
+        :root {
+            --primary-color: #6c5ce7; /* ม่วงหลัก */
+            --secondary-color: #0984e3; /* ฟ้าหลัก */
+            --bg-color-light: #fff;
+            --bg-color-alt: #f1f2f6;
+            --text-color: #2d3436;
+        }
 
-/* --- Utility Classes --- */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.section-title { text-align: center; margin-bottom: 40px; font-weight: 600; color: var(--primary-color); position: relative; padding-bottom: 10px; }
-.section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background-color: var(--secondary-color); }
-.btn { display: inline-block; padding: 10px 25px; background-color: var(--primary-color); color: #fff; border-radius: 25px; font-weight: 600; transition: background-color 0.3s ease; border: 2px solid var(--primary-color); }
-.btn:hover { background-color: #fff; color: var(--primary-color); }
+        /* --- Utility Classes --- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; font-weight: 600; color: var(--primary-color); position: relative; padding-bottom: 10px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background-color: var(--secondary-color); }
+        .btn { display: inline-block; padding: 10px 25px; background-color: var(--primary-color); color: #fff; border-radius: 25px; font-weight: 600; transition: background-color 0.3s ease; border: 2px solid var(--primary-color); }
+        .btn:hover { background-color: #fff; color: var(--primary-color); }
 
-/* --- ส่วน Header --- */
-header { background-color: #fff; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-.logo { font-size: 1.5rem; font-weight: 600; color: var(--primary-color); }
-.nav-links { display: flex; gap: 20px; }
-.nav-links a { font-weight: 400; transition: color 0.3s ease; }
-.nav-links a:hover { color: var(--primary-color); }
-.menu-toggle { display: none; cursor: pointer; }
+        /* --- ส่วน Header --- */
+        header { background-color: #fff; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-size: 1.5rem; font-weight: 600; color: var(--primary-color); }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { font-weight: 400; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--primary-color); }
+        .menu-toggle { display: none; cursor: pointer; }
 
-/* --- ส่วน Hero --- */
-#hero { padding: 140px 0 80px 0; background-color: #fff; display: flex; align-items: center; }
-.hero-content { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-.hero-text { flex: 1; }
-.hero-text h1 { font-size: 2.5rem; font-weight: 600; color: var(--text-color); margin-bottom: 15px; line-height: 1.2; }
-.hero-text span { color: var(--primary-color); }
-.hero-text p { font-size: 1.1rem; margin-bottom: 30px; color: #636e72; }
-.hero-img-container { flex: 1; text-align: center; }
-.hero-img { border-radius: 50%; box-shadow: 0 10px 20px rgba(0,0,0,0.1); width: 300px; height: 300px; object-fit: cover; }
+        /* --- ส่วน Hero --- */
+        #hero { padding: 140px 0 80px 0; background-color: #fff; display: flex; align-items: center; }
+        .hero-content { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 2.5rem; font-weight: 600; color: var(--text-color); margin-bottom: 15px; line-height: 1.2; }
+        .hero-text span { color: var(--primary-color); }
+        .hero-text p { font-size: 1.1rem; margin-bottom: 30px; color: #636e72; }
+        .hero-img-container { flex: 1; text-align: center; }
+        .hero-img { border-radius: 50%; box-shadow: 0 10px 20px rgba(0,0,0,0.1); width: 300px; height: 300px; object-fit: cover; }
 
-/* --- ส่วน About Me --- */
-#about { padding: 80px 0; background-color: var(--bg-color-alt); }
-.about-content { display: flex; gap: 50px; align-items: center; }
-.about-text { flex: 2; }
-.about-img { flex: 1; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 250px; height: 250px; object-fit: cover; }
+        /* --- ส่วน About Me --- */
+        #about { padding: 80px 0; background-color: var(--bg-color-alt); }
+        .about-content { display: flex; gap: 50px; align-items: center; }
+        .about-text { flex: 2; }
+        .about-img { flex: 1; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 250px; height: 250px; object-fit: cover; }
 
-/* --- ส่วน Skills --- */
-#skills { padding: 80px 0; background-color: #fff; }
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-.skill-card { background-color: var(--bg-color-alt); padding: 30px; border-radius: 10px; text-align: center; transition: transform 0.3s ease; border: 1px solid transparent; }
-.skill-card:hover { transform: translateY(-5px); border: 1px solid var(--secondary-color); }
-.skill-icon { font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px; }
-.skill-card h3 { margin-bottom: 10px; color: var(--text-color); }
+        /* --- ส่วน Skills --- */
+        #skills { padding: 80px 0; background-color: #fff; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .skill-card { background-color: var(--bg-color-alt); padding: 30px; border-radius: 10px; text-align: center; transition: transform 0.3s ease; border: 1px solid transparent; }
+        .skill-card:hover { transform: translateY(-5px); border: 1px solid var(--secondary-color); }
+        .skill-icon { font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px; }
+        .skill-card h3 { margin-bottom: 10px; color: var(--text-color); }
 
-/* --- ส่วน Contact --- */
-#contact { padding: 80px 0; background-color: var(--bg-color-alt); }
-.contact-content { display: flex; gap: 50px; }
-.contact-info { flex: 1; }
-.contact-info p { margin-bottom: 15px; }
-.social-links { margin-top: 20px; display: flex; gap: 15px; }
-.social-icon { font-size: 1.2rem; color: var(--text-color); transition: color 0.3s ease; }
-.social-icon:hover { color: var(--secondary-color); }
-.contact-form { flex: 1; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.form-group { margin-bottom: 15px; }
-.form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Prompt', sans-serif; }
-.form-group textarea { height: 100px; resize: none; }
-.form-group button { border: none; cursor: pointer; }
+        /* --- ส่วน Contact --- */
+        #contact { padding: 80px 0; background-color: var(--bg-color-alt); }
+        .contact-content { display: flex; gap: 50px; }
+        .contact-info { flex: 1; }
+        .contact-info p { margin-bottom: 15px; }
+        .social-links { margin-top: 20px; display: flex; gap: 15px; }
+        .social-icon { font-size: 1.2rem; color: var(--text-color); transition: color 0.3s ease; }
+        .social-icon:hover { color: var(--secondary-color); }
+        .contact-form { flex: 1; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 15px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Prompt', sans-serif; }
+        .form-group textarea { height: 100px; resize: none; }
+        .form-group button { border: none; cursor: pointer; }
 
-/* --- ส่วน Footer --- */
-footer { background-color: #fff; padding: 20px 0; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #eee; }
+        /* --- ส่วน Footer --- */
+        footer { background-color: #fff; padding: 20px 0; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #eee; }
 
-/* --- Responsive Styles (มือถือ) --- */
-@media (max-width: 768px) {
-.hero-content, .about-content, .contact-content { flex-direction: column; text-align: center; }
-.hero-text h1 { font-size: 2rem; }
-.hero-img { width: 200px; height: 200px; margin-top: 30px; }
-.nav-links { display: none; width: 100%; position: absolute; top: 60px; left: 0; background-color: #fff; flex-direction: column; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-.nav-links.active { display: flex; }
-.menu-toggle { display: block; font-size: 1.2rem; }
-.about-img { width: 150px; height: 150px; order: -1; } /* ย้ายรูปมาไว้ด้านบน */
-}
-</style>
+        /* --- Responsive Styles (มือถือ) --- */
+        @media (max-width: 768px) {
+            .hero-content, .about-content, .contact-content { flex-direction: column; text-align: center; }
+            .hero-text h1 { font-size: 2rem; }
+            .hero-img { width: 200px; height: 200px; margin-top: 30px; }
+            .nav-links { display: none; width: 100%; position: absolute; top: 60px; left: 0; background-color: #fff; flex-direction: column; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; font-size: 1.2rem; }
+            .about-img { width: 150px; height: 150px; order: -1; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- Header Section -->
-<header>
-<div class="container">
-<nav>
-<div class="logo">Worawut S.</div>
-<div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- ไอคอนเมนู -->
-<ul class="nav-links">
-<li><a href="#hero">หน้าแรก</a></li>
-<li><a href="#about">เกี่ยวกับผม</a></li>
-<li><a href="#skills">ทักษะ</a></li>
-<li><a href="#contact">ติดต่อ</a></li>
-</ul>
-</nav>
-</div>
-</header>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Worawut S.</div>
+                <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+                <ul class="nav-links">
+                    <li><a href="#hero">หน้าแรก</a></li>
+                    <li><a href="#about">เกี่ยวกับผม</a></li>
+                    <li><a href="#skills">ทักษะ</a></li>
+                    <li><a href="#contact">ติดต่อ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- Hero Section -->
-<section id="hero">
-<div class="container hero-content">
-<div class="hero-text">
-<h1>เปลี่ยนเรื่อง 'ยาก' ให้เป็นเรื่อง <span>'ง่าย'</span> กับวรวุฒิ แสนเพียง</h1>
-<p>นักศึกษาคณิตศาสตร์ผู้หลงใหลในการถ่ายทอดความรู้ เชื่อมั่นว่าใครๆ ก็เก่งคณิตได้ ถ้าเจอวิธีที่ใช่!</p>
-<a href="#about" class="btn">รู้จักผมให้มากขึ้น</a>
-</div>
-<div class="hero-img-container">
-<!-- ใส่ URL ของรูปคุณวรวุฒิที่นี่ -->
-<img src="path_to_your_image.jpg" alt="วรวุฒิ แสนเพียง" class="hero-img">
-</div>
-</div>
-</section>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>เปลี่ยนเรื่อง 'ยาก' ให้เป็นเรื่อง <span>'ง่าย'</span> กับวรวุฒิ แสนเพียง</h1>
+                <p>นักศึกษาคณิตศาสตร์ผู้หลงใหลในการถ่ายทอดความรู้ เชื่อมั่นว่าใครๆ ก็เก่งคณิตได้ ถ้าเจอวิธีที่ใช่!</p>
+                <a href="#about" class="btn">รู้จักผมให้มากขึ้น</a>
+            </div>
+            <div class="hero-img-container">
+                <img src="https://via.placeholder.com/300" alt="วรวุฒิ แสนเพียง" class="hero-img">
+            </div>
+        </div>
+    </section>
 
-<!-- About Me Section -->
-<section id="about">
-<div class="container">
-<h2 class="section-title">เกี่ยวกับผม</h2>
-<div class="about-content">
-<!-- ใส่ URL ของรูปภาพเพิ่มเติม -->
-<img src="path_to_another_image.jpg" alt="เกี่ยวกับวรวุฒิ แสนเพียง" class="about-img">
-<div class="about-text">
-<p>สวัสดีครับ ผมชื่อ **วรวุฒิ แสนเพียง** ปัจจุบันเป็นนักศึกษาสายการศึกษา (คณิตศาสตร์) ที่มีความมุ่งมั่นจะเป็นครูที่ช่วยให้เด็กไทยเข้าถึงคณิตศาสตร์ได้อย่างเข้าใจและมีความสุข ผมเชื่อว่าการสอนคณิตศาสตร์ไม่ใช่แค่การบอกสูตร แต่เป็นการสร้างกระบวนการคิดและแก้ปัญหาครับ</p>
-</div>
-</div>
-</div>
-</section>
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">เกี่ยวกับผม</h2>
+            <div class="about-content">
+                <img src="https://via.placeholder.com/250" alt="เกี่ยวกับวรวุฒิ แสนเพียง" class="about-img">
+                <div class="about-text">
+                    <p>สวัสดีครับ ผมชื่อ <strong>วรวุฒิ แสนเพียง</strong> ปัจจุบันเป็นนักศึกษาสายการศึกษา (คณิตศาสตร์) ที่มีความมุ่งมั่นจะเป็นครูที่ช่วยให้เด็กไทยเข้าถึงคณิตศาสตร์ได้อย่างเข้าใจและมีความสุข ผมเชื่อว่าการสอนคณิตศาสตร์ไม่ใช่แค่การบอกสูตร แต่เป็นการสร้างกระบวนการคิดและแก้ปัญหาครับ</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Skills Section -->
-<section id="skills">
-<div class="container">
-<h2 class="section-title">ทักษะและความเชี่ยวชาญ</h2>
-<div class="skills-grid">
-<div class="skill-card">
-<div class="skill-icon">&#x2795;</div> <!-- ไอคอน + -->
-<h3>คณิตศาสตร์พื้นฐาน - ชั้นสูง</h3>
-<p>มีความเข้าใจลึกซึ้งในเนื้อหาคณิตศาสตร์ และสามารถถ่ายทอดได้ตรงประเด็น</p>
-</div>
-<div class="skill-card">
-<div class="skill-icon">&#x1F4D6;</div> <!-- ไอคอน หนังสือ -->
-<h3>การสอนแบบเน้นความเข้าใจ</h3>
-<p>ใช้วิธีที่หลากหลาย ทำให้ผู้เรียนเห็นภาพและเข้าใจที่มาที่ไป ไม่เน้นท่องจำ</p>
-</div>
-<div class="skill-card">
-<div class="skill-icon">&#x270F;</div> <!-- ไอคอน ดินสอ -->
-<h3>การเป็นติวเตอร์ (Tutoring)</h3>
-<p>มีประสบการณ์แนะนำและปรับพื้นฐานให้กับนักเรียน เพื่อความสำเร็จในการสอบ</p>
-</div>
-</div>
-</div>
-</section>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">ทักษะและความเชี่ยวชาญ</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">&#x2795;</div>
+                    <h3>คณิตศาสตร์พื้นฐาน - ชั้นสูง</h3>
+                    <p>มีความเข้าใจลึกซึ้งในเนื้อหาคณิตศาสตร์ และสามารถถ่ายทอดได้ตรงประเด็น</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#x1F4D6;</div>
+                    <h3>การสอนแบบเน้นความเข้าใจ</h3>
+                    <p>ใช้วิธีที่หลากหลาย ทำให้ผู้เรียนเห็นภาพและเข้าใจที่มาที่ไป ไม่เน้นท่องจำ</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#x270F;</div>
+                    <h3>การเป็นติวเตอร์ (Tutoring)</h3>
+                    <p>มีประสบการณ์แนะนำและปรับพื้นฐานให้กับนักเรียน เพื่อความสำเร็จในการสอบ</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact">
-<div class="container">
-<h2 class="section-title">ติดต่อเรา</h2>
-<div class="contact-content">
-<div class="contact-info">
-<p>ยินดีที่จะแลกเปลี่ยนความรู้ หรือสนใจสอบถามเรื่องติวคณิตศาสตร์</p>
-<p><strong>อีเมล:</strong> worawut.s@email.com (ตัวอย่าง)</p>
-<div class="social-links">
-<a href="#" class="social-icon">FB</a> <!-- ตัวอย่าง -->
-<a href="#" class="social-icon">IG</a>
-<a href="#" class="social-icon">Line</a>
-</div>
-</div>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">ติดต่อเรา</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>ยินดีที่จะแลกเปลี่ยนความรู้ หรือสนใจสอบถามเรื่องติวคณิตศาสตร์</p>
+                    <p><strong>อีเมล:</strong> worawut.s@email.com</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">Line</a>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('ส่งข้อความเรียบร้อย!');">
+                    <div class="form-group">
+                        <input type="text" placeholder="ชื่อของคุณ" req
